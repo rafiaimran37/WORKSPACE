@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Startup Idea Validator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>AI Startup Idea Validator</h1>
+
+      <form id="idea-form">
+        <label>
+          Startup Idea Title
+          <input type="text" id="title" required placeholder="e.g., Smart grocery planner" />
+        </label>
+
+        <label>
+          Idea Description
+          <textarea id="description" required placeholder="Describe your startup idea..."></textarea>
+        </label>
+
+        <label>
+          Target Audience
+          <input type="text" id="targetAudience" required placeholder="e.g., busy parents, small businesses" />
+        </label>
+
+        <button type="submit" id="submit-btn">Analyze Idea</button>
+      </form>
+
+      <div id="spinner" class="spinner hidden"></div>
+
+      <section id="result" class="hidden">
+        <button id="clear-btn" class="clear-btn">Clear Results</button>
+        <h2>AI Analysis Result</h2>
+
+        <div class="section" id="market-demand">
+          <h3>Market Demand</h3>
+          <p class="content"></p>
+        </div>
+
+        <div class="section" id="competitors">
+          <h3>Competitors</h3>
+          <p class="content"></p>
+        </div>
+
+        <div class="section" id="revenue-model">
+          <h3>Revenue Model</h3>
+          <p class="content"></p>
+        </div>
+
+        <div class="section" id="swot">
+          <h3>SWOT Analysis</h3>
+          <div class="swot-grid">
+            <div>
+              <h4>Strengths</h4>
+              <ul class="content" id="strengths"></ul>
+            </div>
+            <div>
+              <h4>Weaknesses</h4>
+              <ul class="content" id="weaknesses"></ul>
+            </div>
+            <div>
+              <h4>Opportunities</h4>
+              <ul class="content" id="opportunities"></ul>
+            </div>
+            <div>
+              <h4>Threats</h4>
+              <ul class="content" id="threats"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="suggestions">
+          <h3>Suggestions</h3>
+          <p class="content"></p>
+        </div>
+
+        <div class="section" id="raw">
+          <h3>Raw Response (for debugging)</h3>
+          <pre id="rawOutput"></pre>
+        </div>
+      </section>
+
+      <div id="status" class="status"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
