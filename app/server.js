@@ -12,6 +12,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+// NOTE: This line is intentionally added to create a small, trackable change for git commit/push flow.
 app.use(express.static(path.join(__dirname, "public")));
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
