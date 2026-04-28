@@ -89,7 +89,11 @@ button:hover {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+#competitors .content {
+  white-space: pre-wrap;
 }
 
 pre {
@@ -137,5 +141,4 @@ pre {
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-}
 }
